@@ -21,7 +21,7 @@ class myTheme {
     ),
     colorScheme: ColorScheme.light(
       brightness: Brightness.light,
-      primary: Colors.lightBlue,
+      primary: Colors.redAccent,
       secondary: Color(0xfffef9eb),
     ),
   );
@@ -36,7 +36,7 @@ class myTheme {
     scaffoldBackgroundColor: Color(0xff0f0f0f),
     colorScheme: ColorScheme.dark(
       brightness: Brightness.light,
-      primary: Colors.purple,
+      primary: Colors.lightBlue,
       secondary: Color(0xfffef9eb),
     ),
   );

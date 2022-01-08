@@ -20,7 +20,6 @@ class _MyHomePageState extends State<MyHomePage> {
       statusBarColor: Colors.transparent,
     ));
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.primary,
       appBar: AppBar(
         elevation: 0,
         leading: IconButton(
@@ -43,27 +42,30 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-      body: Column(
-        children: [
-          const CategorySelector(),
-          Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.secondary,
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(30),
-                  topRight: Radius.circular(30),
+      body: Container(
+        color: Theme.of(context).colorScheme.primary,
+        child: Column(
+          children: [
+            const CategorySelector(),
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.secondary,
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30),
+                  ),
+                ),
+                child: Column(
+                  children: const [
+                    favoriteContacts(),
+                    ChatsView(),
+                  ],
                 ),
               ),
-              child: Column(
-                children: const [
-                  favoriteContacts(),
-                  ChatsView(),
-                ],
-              ),
-            ),
-          )
-        ],
+            )
+          ],
+        ),
       ),
     );
   }
